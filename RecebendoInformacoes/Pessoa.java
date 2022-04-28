@@ -21,7 +21,7 @@ public class Pessoa {
         return DDD;
     }
 
-    String validarGenero() {
+    Boolean validarGenero() {
         boolean generoValido = (genero.equals("F") || genero.equals("M") || genero.equals("T") ||
                 genero.equals("Z") || genero.equals("f") || genero.equals("m") ||
                 genero.equals("t") || genero.equals("z"));

@@ -5,4 +5,9 @@ public class Produto {
     Double preco;
     Integer quantidadeEstoque;
     Double precoVariosProdutos;
+
+    public Double valorTotalEstoque(Produto produto) {
+        return produto.preco * produto.quantidadeEstoque;
+    }
+   
 }

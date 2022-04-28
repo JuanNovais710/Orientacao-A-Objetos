@@ -14,7 +14,8 @@ public class EstoqueTotal {
         imprimirTexto("Controle de estoque\n(1): Realizaram vendas\t(2): Chegaram novos produtos\n");
         byte controleEstoque = scanner.nextByte();
         boolean realizaramVendas = controleEstoque == 1;
-        if(!realizaramVendas) {
+        boolean chegaramProdutos = controleEstoque == 2;
+        if(chegaramProdutos) {
             imprimirTexto("Existem " + produto.quantidadeEstoque + " " + produto.nome + " em estoque atualmente, mais quantas chegarão? ");
             int novosProdutosNoEstoque = scanner.nextInt();
             int totalProdutos = novosProdutosNoEstoque + produto.quantidadeEstoque;
@@ -27,8 +28,9 @@ public class EstoqueTotal {
             produto.precoVariosProdutos = totalProdutos * produto.preco;
             imprimirTexto("Foram vendidas " + produtosVendidos + " " + produto.nome + " do antigo estoque de " + produto.quantidadeEstoque + ". Agora temos em estoque: " + totalProdutos + ". Totalizando R$: " + produto.precoVariosProdutos);
         }
-
-
+        else {
+            posicaoInvalida();
+        }
     }
     static Integer lerQuantidadeEmEstoque(Scanner scanner, Produto produto) {
         imprimirTexto("Quantas " + produto.nome + " existem em estoque agora? ");
@@ -41,7 +43,7 @@ public class EstoqueTotal {
         System.out.print(texto);
     }
     static void posicaoInvalida(){
-        System.err.println("Então não chegarão novos produtos ao estoque.");
+        System.err.println("Comando inválido. ");
         System.exit(1);
     }
 

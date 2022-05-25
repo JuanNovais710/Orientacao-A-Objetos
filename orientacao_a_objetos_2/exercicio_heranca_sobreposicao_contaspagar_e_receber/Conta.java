@@ -21,8 +21,7 @@ public class Conta {
             System.out.println("Não pode cancelar uma conta que já foi paga. " + this.getDescricao() + ".");
         }else if (SituacaoConta.CANCELADA.equals(this.getSituacaoConta())) {
             System.out.println("Nâo pode cancelar uma conta que já foi cancelada. " + this.getDescricao() + ".");
-        }
-        else {
+        }else {
             System.out.println("Cancelando conta " + this.getDescricao() + ".");
             this.situacaoConta = SituacaoConta.CANCELADA;
         }
@@ -57,5 +56,4 @@ public class Conta {
     public SituacaoConta getSituacaoConta() {
         return situacaoConta;
     }
-
 }

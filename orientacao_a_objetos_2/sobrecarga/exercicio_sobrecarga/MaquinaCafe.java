@@ -18,20 +18,16 @@ Dica do professor: use o debugger do e execute o exemplo passo a passo. Isso aju
  */
 
 public class MaquinaCafe {
-    private int acucarDisponivel;
+    int acucarDisponivel;
 
-    public void fazerCafe(MaquinaCafe maquinaCafe) {
-        fazerCafe();
+    public void fazerCafe() {
+        fazerCafe(10);
     }
-    void fazerCafe() {
-        int quantidadeAcucarAtual = getAcucarDisponivel();
-        while(quantidadeAcucarAtual >= this.getAcucarDisponivel()) {
-             quantidadeAcucarAtual = getAcucarDisponivel() - 10;
-            if (quantidadeAcucarAtual <= 0) {
-                System.out.println("Açúcar indisponível na máquina. ");
-            } else {
-                System.out.println("Preparando cafézinho! ");
-            }
+    public void fazerCafe(int quantidadeAcucarDesejado) {
+        if(quantidadeAcucarDesejado > this.getAcucarDisponivel()) {
+            System.out.println("Açúcar indisponível na máquina, preparando sem. ");
+        }else {
+            System.out.println("Preparando café com " + quantidadeAcucarDesejado + "g de açúcar. ");
         }
     }
 

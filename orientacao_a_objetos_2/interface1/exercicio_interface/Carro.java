@@ -30,13 +30,15 @@ public class Carro implements Seguravel {
     Double valor;
 
     @Override
-    public void obterDescricao(String descricao) {
-        System.out.println("Qual o nome do carro que deseja adicionar a seguradora? ");
+    public String obterDescricao() {
+        this.descricao = descricao;
+        return descricao;
     }
 
     @Override
-    public void calcularValorApolice() {
+    public double calcularValorApolice() {
 
+        return 0;
     }
 
     public Carro(String descricao, Double valor) {

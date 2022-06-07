@@ -32,9 +32,9 @@ public class TesteCorretora {
         tioZe.fazerPropostaSeguro(carro);
         Imovel imovel = new Imovel("Casa 3 quartos");
         tioZe.fazerPropostaSeguro(imovel);
-        Notebook notebook = new Notebook();
+        Notebook notebook = new Notebook("Notebook AMD Radeon Ryzen 7 + SSD");
         tioZe.fazerPropostaSeguro(notebook);
-        Barco barco = new Barco();
+        Barco barco = new Barco("Lancha do veio da cabeça branca");
         tioZe.fazerPropostaSeguro(barco);
     }
 }

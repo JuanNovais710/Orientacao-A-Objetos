@@ -29,12 +29,17 @@ public class Notebook implements Seguravel{
     String descricao;
 
     @Override
-    public void obterDescricao(String descricao) {
-
+    public String obterDescricao() {
+        this.descricao = descricao;
+        return descricao;
     }
 
     @Override
-    public void calcularValorApolice() {
+    public double calcularValorApolice() {
 
+        return 0;
+    }
+    public Notebook(String descricao) {
+        this.descricao = descricao;
     }
 }

@@ -25,8 +25,11 @@ No método main(), instanciamos uma corretora de seguros, um carro e um imóvel,
 Implemente os métodos da interface e adicione algumas linhas na classe Principal para testar as novas classes.
  */
 
-public class CorretoraSeguros {
+public class CorretoraSeguros  {
+    Seguravel seguravel;
+    String descricao;
+
     public void fazerPropostaSeguro(Seguravel seguravel) {
-        System.out.println("Deseja fazer um seguro? " );
+        System.out.println("Deseja fazer um seguro para seu " + seguravel.obterDescricao() + "?");
     }
 }

@@ -27,6 +27,6 @@ Implemente os métodos da interface e adicione algumas linhas na classe Principa
  */
 
 public interface Seguravel {
-    public void obterDescricao(String descricao);
-    public void calcularValorApolice();
+    public String obterDescricao();
+    public double calcularValorApolice();
 }
